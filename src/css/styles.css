@@ -1,18 +1,102 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*=============1-gallery styles===============*/
+
+ul {
+  list-style-type: none;
+}
+
+.gallery {
+  padding: 24px 156px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  width: calc((100% - 2*24px) / 3);
+  max-width: 360px;
+  max-height: 200px;
+
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1441px) {
+  .gallery {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+}
+
+
+/*================2-form Styles===============*/
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  max-width: 360px;
+  padding: 24px;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0.5;
+  letter-spacing: 0.04em;
+}
+
+.feedback-form input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.feedback-form textarea {
+  min-height: 80px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  
+}
+
+.feedback-form button {
+  margin-top: 8px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 0.5;
+  letter-spacing: 0.04em;
+  max-width: 95px;
+  height: 40px;
+
+  color:#FFFFFF;
+  background-color: #4E75FF;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #3550CC;
+  transition: background-color 250ms cubic-bezier(.4, 0, .2, 1);
+
+}
